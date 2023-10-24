@@ -17,11 +17,12 @@ sleep 2
 echo "$(tput setaf 5)[Instalador DataSync]: $(tput sgr0) $(tput setaf 10)Irei verificar se você já tem o Java."
 sleep 2
 
-java -version
+java --version
 if [ $? -eq 0 ]
 then
     echo "$(tput setaf 5)[Instalador DataSync]: $(tput sgr0)$(tput sgr0)$(tput setaf 10)Você já tem o Java instalado!"
-
+sudo apt install openjdk-17-jre -y #executa instalacao do java
+fi #fecha o 2º if
     sleep 2
 
     echo "$(tput setaf 5)[Instalador DataSync]: $(tput sgr0)$(tput setaf 10)Então iremos prosseguir com a instalação da DataSync..."
